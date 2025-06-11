@@ -24,6 +24,7 @@ public class PIM extends CommonToAllPage {
         enterInput(employee_Name ,"Aakash" );
         enterInput(employee_Id , "11");
         clickElement(employement_status);
+        WaitHelper.checkVisibility(driver , text);
         clickElement(text);
         }
 }

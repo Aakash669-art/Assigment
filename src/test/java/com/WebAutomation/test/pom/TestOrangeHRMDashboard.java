@@ -33,6 +33,7 @@ public class TestOrangeHRMDashboard extends CommonToAllTestCase {
         pim.PIM1(PropertiesReader.readkey("employementStatus"));
 
         LoginPage logout1 = new LoginPage(getDriver());
+        logout1.popup();
         logout1.logout();
         getDriver().quit();
     }

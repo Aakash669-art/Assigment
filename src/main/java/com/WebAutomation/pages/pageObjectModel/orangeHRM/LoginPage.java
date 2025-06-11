@@ -15,6 +15,8 @@ public class LoginPage extends CommonToAllPage {
     private By password = By.xpath("//input[@name ='password']");
     private By loginButton = By.xpath("//button[@type='submit']");
     private By userProfile = By.xpath("//span[@class = 'oxd-userdropdown-tab']");
+    private By about = By.xpath("//a[text()='About']");
+    private By close = By.xpath("//button[text()='×']");
     private By logout = By.xpath("//a[text()='Logout']");
 
     public void loginToOrangeHRMLoginValidCreds(String user, String pwd) {
@@ -24,12 +26,17 @@ public class LoginPage extends CommonToAllPage {
             enterInput(password,pwd);
             clickElement(loginButton);
         }
+    public  void popup(){
+      clickElement(userProfile);
+      clickElement(about);
+      clickElement(close);
 
-
+    }
         public void logout()
         {
         clickElement(userProfile);
         clickElement(logout);
         }
+
     }
 
